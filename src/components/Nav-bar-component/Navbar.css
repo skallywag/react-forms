@@ -1,0 +1,27 @@
+.navBar {
+  background-color: cornflowerblue;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.btn-con {
+  margin-right: 40px;
+}
+
+.acct-btns {
+  background-color: black;
+  color: whitesmoke;
+  border-style: none;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.acct-btns:hover {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
