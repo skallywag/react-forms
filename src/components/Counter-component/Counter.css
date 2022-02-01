@@ -1,0 +1,20 @@
+.count-con {
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+
+.count-btns {
+  font-size: 80px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.add-btn {
+  cursor: pointer;
+  color: green;
+}
+
+.minus-btn {
+  cursor: pointer;
+  color: red;
+}

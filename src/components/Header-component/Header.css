@@ -1,0 +1,21 @@
+.head-con {
+  margin-left: 50px;
+  margin-bottom: 50px;
+}
+
+h2 {
+  font-size: 25px;
+}
+
+button {
+  background-color: black;
+  color: white;
+  font-size: 30px;
+  margin-left: 5px;
+}
+
+button:hover {
+  background-color: tomato;
+  color: black;
+  cursor: pointer;
+}

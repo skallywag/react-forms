@@ -1,48 +1,28 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import axios from "axios";
+import Joke from "../RandomJoke-component/Joke";
+import useWeatherApi from "../WeatherApi-component/WeatherApi";
+import "./Header.css";
 
 const Header = () => {
-  const [zipCode, setZipCode] = useState("");
-  const [tempF, setTempF] = useState("");
-  const [city, setCity] = useState("");
-  const [data, setData] = useState({});
-
-  const handleChange = (value) => {
-    setZipCode(value);
-  };
-
-  const submitHandler = (zipCode) => {
-    axios
-      .get(
-        `https://api.weatherapi.com/v1/current.json?key=77781fb0f0734297b2603939211512&q=${zipCode}&aqi=no`
-      )
-      .then((res) => {
-        let data = res;
-        setData(data);
-        const city = data.location.name;
-        const tempF = data.current.temp_f;
-        setTempF(tempF);
-        setCity(city);
-      });
-  };
+  const { handleSearch, cityInfo, zipCode, setZipCode } = useWeatherApi();
 
   return (
-    <div>
+    <div className="head-con">
       <h1>Weather App</h1>
       <h2>enter a U.S zipcode</h2>
       <input
-        onChange={(e) => handleChange(e.target.value)}
+        onChange={(e) => setZipCode(e.target.value)}
         placeholder="zipcode"
         type="text"
         value={zipCode}
       />
-      <button type="submit" onClick={() => submitHandler(zipCode)}>
+      <button type="submit" onClick={() => handleSearch()}>
         Search
       </button>
-      {tempF ? (
+
+      {cityInfo ? (
         <h1>
-          the temp in {city} is {tempF} degrees
+          the temp in {cityInfo.name} is {cityInfo.temp} degrees
         </h1>
       ) : null}
     </div>
