@@ -62,3 +62,8 @@ h1 {
   cursor: pointer;
   color: blue;
 }
+
+.error {
+  color: black;
+  font-size: 20px;
+}

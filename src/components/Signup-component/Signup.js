@@ -1,5 +1,6 @@
 import React from "react";
 import { useFormik } from "formik";
+import * as Yup from "yup";
 import "./Signup.css";
 
 const Signup = (props) => {
@@ -11,8 +12,15 @@ const Signup = (props) => {
       password: "",
       repassword: "",
     },
-    onSubmit: (values) => {
+
+    validationSchema: Yup.object({
+      firstName: Yup.string()
+        .max(15, "must be 14 characters or less")
+        .required("required"),
+    }),
+    onSubmit: (values, { resetForm }) => {
       alert(JSON.stringify(values));
+      resetForm({ values: "" });
     },
   });
 
@@ -37,6 +45,9 @@ const Signup = (props) => {
               value={formik.values.firstName}
               onChange={formik.handleChange}
             />
+            {formik.errors.firstName ? (
+              <p className="error">{formik.errors.firstName}</p>
+            ) : null}
           </div>
           <div>
             <input

@@ -1,0 +1,53 @@
+.login-con {
+  background-color: tomato;
+  padding: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40vw;
+  border-radius: 10px;
+  transition: all 1.5s ease-in-out;
+}
+
+h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.signup-input {
+  height: 70px;
+}
+
+input {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.submit-btn {
+  background-color: black;
+  color: whitesmoke;
+  border-radius: 5px;
+  border-style: none;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.submit-btn:hover {
+  background-color: whitesmoke;
+  color: black;
+  cursor: pointer;
+}
+
+.closeForm {
+  position: absolute;
+  font-size: 35px;
+  top: 20px;
+  right: 20px;
+}
+
+.closeForm:hover {
+  cursor: pointer;
+  color: blue;
+}
