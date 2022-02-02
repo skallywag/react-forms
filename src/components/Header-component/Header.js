@@ -1,5 +1,4 @@
 import React from "react";
-import Joke from "../RandomJoke-component/Joke";
 import useWeatherApi from "../WeatherApi-component/WeatherApi";
 import "./Header.css";
 
@@ -8,8 +7,8 @@ const Header = () => {
 
   return (
     <div className="head-con">
-      <h1>Weather App</h1>
-      <h2>enter a U.S zipcode</h2>
+      <h1 className="weather-title">Weather App</h1>
+      <h2 className="weather-h2">enter a U.S zipcode</h2>
       <input
         onChange={(e) => setZipCode(e.target.value)}
         placeholder="zipcode"

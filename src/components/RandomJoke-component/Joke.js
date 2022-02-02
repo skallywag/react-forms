@@ -12,7 +12,7 @@ const Joke = () => {
 
   return (
     <div className="joke-con">
-      <h1>Chuck Norris joke of the day</h1>
+      <h1 className="joke-title">Chuck Norris joke of the day</h1>
       <p>{joke}</p>
     </div>
   );

@@ -18,7 +18,7 @@ const Todo = () => {
 
   return (
     <div className="todo-con">
-      <h1>My to-do list</h1>
+      <h1 className="todo-title">My to-do list</h1>
       <input
         type="text"
         placeholder="enter in a todo"

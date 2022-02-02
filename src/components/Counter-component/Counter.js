@@ -13,7 +13,7 @@ const Counter = () => {
 
   return (
     <div className="count-con">
-      <h1>Counter:</h1>
+      <h1 className="count-title">Counter:</h1>
       <div className="count-btns">
         <span onClick={() => setCount(count + 1)} className="add-btn">
           +

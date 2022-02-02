@@ -1,23 +1,23 @@
 import React from "react";
-// import Navbar from "./components/Nav-bar-component/Navbar";
-import "./reset.css";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import ErrorPage from "./Pages/ErrorPage";
+import Home from "./Pages/Home";
+import MoreApps from "./Pages/MoreApps";
 import Navbar from "./components/Nav-bar-component/Navbar";
-import Header from "./components/Header-component/Header";
-// import Footer from "./components/Footer-component/Footer";
-import Counter from "./components/Counter-component/Counter";
-import Joke from "./components/RandomJoke-component/Joke";
-import Todo from "./components/Todo-component/Todo";
+import "./reset.css";
+import Movies from "./Pages/Movies";
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <Navbar />
-      <Joke />
-      <Header />
-      <Counter />
-      <Todo />
-      {/* <Footer /> */}
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/MoreApps" element={<MoreApps />}></Route>
+        <Route path="/Movies" element={<Movies />}></Route>
+        <Route path="*" element={<ErrorPage />}></Route>
+      </Routes>
+    </Router>
   );
 }
 

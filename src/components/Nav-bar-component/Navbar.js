@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Signup from "../Signup-component/Signup";
 import Login from "../Login-component/Login";
 import "./Navbar.css";
@@ -10,6 +11,20 @@ const Navbar = () => {
 
   return (
     <div className="navBar">
+      <nav>
+        <ul className="nav-links">
+          <Link className="link" to="/">
+            {" "}
+            Home{" "}
+          </Link>
+          <Link className="link" to="/moreapps">
+            More Apps
+          </Link>
+          <Link className="link" to="/movies">
+            Movie List
+          </Link>
+        </ul>
+      </nav>
       <div className="btn-con">
         <button onClick={() => setLoginModal(true)} className="acct-btns">
           Login
