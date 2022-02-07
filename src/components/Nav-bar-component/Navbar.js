@@ -14,8 +14,7 @@ const Navbar = () => {
       <nav>
         <ul className="nav-links">
           <Link className="link" to="/">
-            {" "}
-            Home{" "}
+            Home
           </Link>
           <Link className="link" to="/moreapps">
             More Apps

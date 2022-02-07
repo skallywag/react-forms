@@ -1,0 +1,15 @@
+.movies-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.page-title {
+  font-size: 70px;
+  margin-bottom: 50px;
+}
+
+.movie-card {
+  background-color: tomato;
+}

@@ -1,11 +1,11 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ErrorPage from "./Pages/ErrorPage";
 import Home from "./Pages/Home";
 import MoreApps from "./Pages/MoreApps";
 import Navbar from "./components/Nav-bar-component/Navbar";
-import "./reset.css";
 import Movies from "./Pages/Movies";
+import "./reset.css";
 
 function App() {
   return (
